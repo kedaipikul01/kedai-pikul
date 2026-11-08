@@ -25,7 +25,7 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
 
     steps:
-      # 1. Download source code
+      # 1. Checkout source code
       - name: Checkout repository
         uses: actions/checkout@v4
 
@@ -34,16 +34,14 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 22
-          cache: npm
 
       # 3. Install dependencies
       - name: Install dependencies
-        run: npm install --legacy-peer-deps
+        run: npm install --legacy-peer-deps --no-audit --no-fund
 
       # 4. Check project
       - name: Check project files
         run: |
-          echo "Checking Kedai Pikul project..."
           test -f package.json
           test -f index.html
           test -f vite.config.ts
@@ -53,7 +51,7 @@ jobs:
       - name: Build website
         run: npm run build
 
-      # 6. Check build output
+      # 6. Verify build output
       - name: Verify build output
         run: |
           test -f dist/index.html
@@ -64,7 +62,7 @@ jobs:
       - name: Configure GitHub Pages
         uses: actions/configure-pages@v5
 
-      # 8. Upload build files
+      # 8. Upload build artifact
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v4
         with:
@@ -75,8 +73,8 @@ jobs:
         id: deployment
         uses: actions/deploy-pages@v4
 
-      # 10. Show website URL
+      # 10. Display website URL
       - name: Deployment result
         run: |
-          echo "KEDAI PIKUL WEBSITE SUCCESSFULLY DEPLOYED!"
-          echo "Website URL: ${{ steps.deployment.outputs.page_url }}"
+          echo "KEDAI PIKUL DEPLOYMENT SUCCESS!"
+          echo "Website: ${{ steps.deployment.outputs.page_url }}"
