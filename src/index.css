@@ -1,0 +1,40 @@
+@import "tailwindcss";
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    font-family: 'Poppins', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  }
+  h1, h2, h3, h4, h5, h6, .font-heading {
+    font-family: 'Fredoka', cursive, system-ui, sans-serif;
+    letter-spacing: -0.01em;
+  }
+}
+
+/* Custom animations & subtle decorative effects */
+@keyframes pulseSubtle {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.04); }
+}
+
+.animate-pulse-subtle {
+  animation: pulseSubtle 3s ease-in-out infinite;
+}
+
+/* Custom scrollbar for clean menu scrolling */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #FFF5EE;
+}
+::-webkit-scrollbar-thumb {
+  background: #FF6500;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #A90000;
+}

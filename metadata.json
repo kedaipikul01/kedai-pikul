@@ -1,0 +1,7 @@
+{
+  "name": "Kedai Pikul - Mie Ayam, Cemilan & Kopi",
+  "description": "Website resmi Kedai Pikul. Nikmati Mie Ayam Komplit, Cemilan Tahu Walik, Kopi Tubruk, dan aneka minuman segar dengan harga ramah di kantong.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
+
