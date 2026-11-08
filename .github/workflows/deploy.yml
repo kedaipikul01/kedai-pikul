@@ -1,4 +1,5 @@
-name: Deploy Kedai Pikul
+
+name: Deploy Kedai Pikul to GitHub Pages
 
 on:
   push:
@@ -11,25 +12,71 @@ permissions:
   pages: write
   id-token: write
 
+concurrency:
+  group: github-pages
+  cancel-in-progress: true
+
 jobs:
-  deploy:
+  build-and-deploy:
     runs-on: ubuntu-latest
 
-    steps:
-      - uses: actions/checkout@v4
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
 
-      - uses: actions/setup-node@v4
+    steps:
+      # 1. Download source code
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      # 2. Setup Node.js
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
         with:
           node-version: 22
+          cache: npm
 
-      - run: npm install
+      # 3. Install dependencies
+      - name: Install dependencies
+        run: npm install --legacy-peer-deps
 
-      - run: npm run build
+      # 4. Check project
+      - name: Check project files
+        run: |
+          echo "Checking Kedai Pikul project..."
+          test -f package.json
+          test -f index.html
+          test -f vite.config.ts
+          echo "Project files found!"
 
-      - uses: actions/configure-pages@v5
+      # 5. Build website
+      - name: Build website
+        run: npm run build
 
-      - uses: actions/upload-pages-artifact@v4
+      # 6. Check build output
+      - name: Verify build output
+        run: |
+          test -f dist/index.html
+          echo "Build successful!"
+          ls -la dist
+
+      # 7. Configure GitHub Pages
+      - name: Configure GitHub Pages
+        uses: actions/configure-pages@v5
+
+      # 8. Upload build files
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v4
         with:
           path: ./dist
 
-      - uses: actions/deploy-pages@v4
+      # 9. Deploy website
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
+
+      # 10. Show website URL
+      - name: Deployment result
+        run: |
+          echo "KEDAI PIKUL WEBSITE SUCCESSFULLY DEPLOYED!"
+          echo "Website URL: ${{ steps.deployment.outputs.page_url }}"
