@@ -1,3 +1,8 @@
+import mieAyamKomplit from '../assets/images/all-menus/1.png';
+import mieAyamOriginal from '../assets/images/hero_mie_ayam_bowl_1794120888502.jpg';
+import tahuWalik from '../assets/images/tahu_walik_cemilan_1794120890349.jpg';
+import minuman from '../assets/images/minuman_segar_kopi_1794120890050.jpg';
+
 export interface MenuItem {
   id: string;
   name: string;
@@ -32,7 +37,7 @@ export const MENU_ITEMS: MenuItem[] = [
     description: 'Mie kenyal gurih dengan topping ayam semur istimewa, 2 bakso sapi lembut, pangsit goreng renyah, caisim segar, dan kuah kaldu terpisah.',
     isSpecial: true,
     specialBadgeText: 'MENU SPESIAL KEDAI PIKUL',
-    image: '/src/assets/images/mie_ayam_komplit_dish_1794120889365.jpg',
+    image: mieAyamKomplit,
   },
   {
     id: 'mie-ayam-original',
@@ -40,7 +45,7 @@ export const MENU_ITEMS: MenuItem[] = [
     category: 'mie-ayam',
     price: 8000,
     description: 'Mie ayam klasik porsi mantap bertabur cincangan ayam kecap bumbu rempah gurih lezat dan sayuran hijau segar.',
-    image: '/src/assets/images/hero_mie_ayam_bowl_1794120888502.jpg',
+    image: mieAyamOriginal,
   },
   {
     id: 'mie-goreng-instan',
@@ -71,7 +76,7 @@ export const MENU_ITEMS: MenuItem[] = [
     category: 'cemilan',
     price: 5000,
     description: 'Tahu pong dibalik dengan isian adonan ayam krispi di luar empuk di dalam, disajikan dengan cocolan petis & cabai rawit hijau.',
-    image: '/src/assets/images/tahu_walik_cemilan_1794120890349.jpg',
+    image: tahuWalik,
   },
   {
     id: 'tahu-petis',
@@ -141,7 +146,7 @@ export const MENU_ITEMS: MenuItem[] = [
     description: 'Seduhan teh wangi melati khas Nusantara, tersedia disajikan dingin segar atau hangat menenangkan.',
     hasTempOptions: true,
     tempPrices: { es: 3000, hot: 3000 },
-    image: '/src/assets/images/minuman_segar_kopi_1794120890050.jpg',
+    image: minuman,
   },
   {
     id: 'temulawak',
@@ -212,7 +217,7 @@ export const MENU_ITEMS: MenuItem[] = [
     category: 'kopi',
     price: 6000,
     description: 'Kopi tubruk robusta murni dengan body tebal, aroma harum kuat, dan rasa pahit mantap pembakar semangat.',
-    image: '/src/assets/images/minuman_segar_kopi_1794120890050.jpg',
+    image: minuman,
   },
   {
     id: 'kopi-arabika',
