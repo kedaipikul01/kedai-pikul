@@ -23,7 +23,7 @@ export const Footer: React.FC = () => {
             </div>
 
             <p className="text-sm text-stone-400 leading-relaxed max-w-sm">
-              Kedai Pikul hadir menyajikan mie ayam gurih otentik, renyahnya cemilan tahu walik, seduhan kopi tubruk, dan minuman segar penuntas dahaga dengan harga ramah di kantong.
+              KedaissssPikul hadir menyajikan mie ayam gurih otentik, renyahnya cemilan tahu walik, seduhan kopi tubruk, dan minuman segar penuntas dahaga dengan harga ramah di kantong.
             </p>
 
             <div className="pt-2 text-xs text-stone-400">
