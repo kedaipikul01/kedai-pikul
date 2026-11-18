@@ -33,7 +33,7 @@ export const Navbar: React.FC<NavbarProps> = ({ cartCount, onOpenCart }) => {
       <div className="bg-[#A90000] text-[#FFD400] text-xs font-medium py-1.5 px-4 text-center border-b border-[#E52B0B]/30 flex items-center justify-center gap-3">
         <span className="flex items-center gap-1">
           <Clock className="w-3.5 h-3.5 text-[#FFD400]" />
-          Buka Setiap Hari: 10.00 – 22.00 WIB
+          Buka Setiap Hari Senin s.d Kamis, Sabtu & Minggu, pukul: 11.00 – 20.30 WIB
         </span>
         <span className="hidden sm:inline text-white/50">|</span>
         <span className="hidden sm:inline text-white">
@@ -50,11 +50,10 @@ export const Navbar: React.FC<NavbarProps> = ({ cartCount, onOpenCart }) => {
       </div>
 
       <header
-        className={`sticky top-0 z-40 transition-all duration-200 ${
-          isScrolled
-            ? 'bg-[#A90000]/95 backdrop-blur-md shadow-lg shadow-black/10 py-2.5'
-            : 'bg-[#A90000] py-3.5'
-        }`}
+        className={`sticky top-0 z-40 transition-all duration-200 ${isScrolled
+          ? 'bg-[#A90000]/95 backdrop-blur-md shadow-lg shadow-black/10 py-2.5'
+          : 'bg-[#A90000] py-3.5'
+          }`}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between gap-4">
