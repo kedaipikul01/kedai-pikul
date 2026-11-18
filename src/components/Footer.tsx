@@ -28,7 +28,7 @@ export const Footer: React.FC = () => {
 
             <div className="pt-2 text-xs text-stone-400">
               <p className="font-semibold text-stone-200">Jam Buka:</p>
-              <p>Setiap Hari: 10.00 – 22.00 WIB</p>
+              <p>Setiap Hari: 11.00 – 20.30 WIB</p>
             </div>
           </div>
 

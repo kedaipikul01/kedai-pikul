@@ -47,14 +47,14 @@ export const LocationSection: React.FC = () => {
 
               <div className="space-y-2.5 pt-2 border-t border-stone-100 text-sm">
                 <div className="flex items-center justify-between py-1.5">
-                  <span className="font-semibold text-stone-800">Senin – Minggu</span>
+                  <span className="font-semibold text-stone-800">Senin s.d Kamis, Sabtu & Minggu</span>
                   <span className="font-bold text-[#A90000] bg-red-50 px-3 py-1 rounded-full text-xs">
-                    10.00 – 22.00 WIB
+                    10.00 – 20.30 WIB
                   </span>
                 </div>
                 <div className="flex items-center gap-2 text-xs text-emerald-700 bg-emerald-50 px-3 py-2 rounded-xl">
                   <CheckCircle2 className="w-4 h-4 shrink-0" />
-                  <span>Buka setiap hari termasuk hari libur dan tanggal merah.</span>
+                  <span>Tutup setiap hari Jumat. Buka setiap hari lainnya, termasuk hari libur dan tanggal merah.</span>
                 </div>
               </div>
             </div>
@@ -79,8 +79,14 @@ export const LocationSection: React.FC = () => {
               </p>
 
               <div className="pt-2">
-                <a
+                {/* <a
                   href={`https://maps.google.com/?q=Kedai+Pikul+Mie+Ayam`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 px-5 py-2.5 bg-[#A90000] hover:bg-[#8e0000] text-white text-xs font-bold rounded-xl shadow-md transition-all active:scale-95"
+                > */}
+                <a
+                  href="https://www.google.com/maps/place/Mie+Ayam+Kedai+Pikul+(Mbak+Hesti)/@-8.299034,114.2806021,17z/data=!3m1!4b1!4m6!3m5!1s0x2dd151e502070f8d:0x2becf959606d1fee!8m2!3d-8.2990393!4d114.283177!16s%2Fg%2F11jnm47ws9?entry=ttu&g_ep=EgoyMDI2MTExNS4wIKXMDSoASAFQAw%3D%3D"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 px-5 py-2.5 bg-[#A90000] hover:bg-[#8e0000] text-white text-xs font-bold rounded-xl shadow-md transition-all active:scale-95"
@@ -153,12 +159,18 @@ export const LocationSection: React.FC = () => {
                 </p>
                 <div className="mt-3 flex items-center justify-center gap-2">
                   <span className="text-[11px] font-bold text-emerald-700 bg-emerald-50 px-2.5 py-0.5 rounded-md">
-                    Buka Sekarang
+                    Buka pada jam..
                   </span>
-                  <span className="text-[11px] text-stone-500">10.00 - 22.00</span>
+                  <span className="text-[11px] text-stone-500">11.00 - 20.30 WIB</span>
                 </div>
-                <a
+                {/* <a
                   href={`https://maps.google.com/?q=Kedai+Pikul+Mie+Ayam`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="mt-4 w-full inline-flex items-center justify-center gap-1.5 py-2 bg-[#FF6500] hover:bg-[#e05800] text-white text-xs font-bold rounded-xl shadow transition-colors"
+                > */}
+                <a
+                  href="https://www.google.com/maps/place/Mie+Ayam+Kedai+Pikul+(Mbak+Hesti)/@-8.299034,114.2806021,17z/data=!3m1!4b1!4m6!3m5!1s0x2dd151e502070f8d:0x2becf959606d1fee!8m2!3d-8.2990393!4d114.283177!16s%2Fg%2F11jnm47ws9?entry=ttu&g_ep=EgoyMDI2MTExNS4wIKXMDSoASAFQAw%3D%3D"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="mt-4 w-full inline-flex items-center justify-center gap-1.5 py-2 bg-[#FF6500] hover:bg-[#e05800] text-white text-xs font-bold rounded-xl shadow transition-colors"
