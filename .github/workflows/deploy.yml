@@ -35,6 +35,12 @@ jobs:
   with:
     node-version: 22.16.0
 
+    - name: Check environment
+  run: |
+    node --version
+    npm --version
+    npm run
+
       # 3. Install dependencies
       - name: Install dependencies
         run: npm install --legacy-peer-deps --no-audit --no-fund
