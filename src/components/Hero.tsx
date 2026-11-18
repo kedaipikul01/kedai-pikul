@@ -1,6 +1,7 @@
 import React from 'react';
 import { ArrowDown, Flame, Utensils, Sparkles, CheckCircle2 } from 'lucide-react';
 import { WA_PHONE_NUMBER } from '../data/menuData';
+import menusDefaultImage from '../assets/images/all-menus/menus-default.png';
 
 interface HeroProps {
   onOpenCart?: () => void;
@@ -50,7 +51,7 @@ export const Hero: React.FC<HeroProps> = () => {
                 BUKA!
               </span>
               <span className="text-xs sm:text-sm font-bold bg-[#A90000] text-white px-2.5 py-0.5 rounded-lg">
-                Setiap Hari
+                Setiap Hari Senin s.d Kamis, <br></br>Sabtu & Minggu..
               </span>
             </div>
 
@@ -117,7 +118,8 @@ export const Hero: React.FC<HeroProps> = () => {
               {/* Central Bowl Container with curved mask */}
               <div className="relative w-full h-full rounded-full overflow-hidden p-3 bg-gradient-to-tr from-[#FFD400] via-[#FF6500] to-white shadow-2xl">
                 <img
-                  src="/src/assets/images/hero_mie_ayam_bowl_1794120888502.jpg"
+                  src={menusDefaultImage}
+                  // src="/src/assets/images/hero_mie_ayam_bowl_1794120888502.jpg"
                   alt="Semangkuk Mie Ayam Spesial Kedai Pikul yang lezat dan menggugah selera"
                   className="w-full h-full object-cover rounded-full shadow-inner transform hover:scale-105 transition-transform duration-500"
                   referrerPolicy="no-referrer"

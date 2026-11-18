@@ -1,7 +1,33 @@
-import mieAyamKomplit from '../assets/images/all-menus/1.png';
-import mieAyamOriginal from '../assets/images/hero_mie_ayam_bowl_1794120888502.jpg';
-import tahuWalik from '../assets/images/tahu_walik_cemilan_1794120890349.jpg';
-import minuman from '../assets/images/minuman_segar_kopi_1794120890050.jpg';
+// Makanan
+import mieAyamKomplit from '../assets/images/all-menus/2.png';
+import mieAyamOriginal from '../assets/images/all-menus/4.png';
+import mieGorengInstan from '../assets/images/all-menus/menus-default.png';
+import mieKuahInstan from '../assets/images/all-menus/menus-default.png';
+import mieInstanTelor from '../assets/images/all-menus/menus-default.png';
+
+// Cemilan
+import tahuWalik from '../assets/images/all-menus/6.png';
+import tahuPetis from '../assets/images/all-menus/10.png';
+import tahuKocek from '../assets/images/all-menus/11.png';
+import siomayGoreng from '../assets/images/all-menus/8.png';
+import siomayKuah from '../assets/images/all-menus/menus-default.png';
+import kentangGoreng from '../assets/images/all-menus/menus-default.png';
+import nuggetGoreng from '../assets/images/all-menus/menus-default.png';
+import sosisGoreng from '../assets/images/all-menus/menus-default.png';
+import mixPlatter from '../assets/images/all-menus/menus-default.png';
+
+// Minuman Segar
+import teh from '../assets/images/all-menus/22.png';
+import temulawak from '../assets/images/all-menus/24.png';
+import jerukPeras from '../assets/images/all-menus/26.png';
+import milo from '../assets/images/all-menus/23.png';
+import susuCoklatPutih from '../assets/images/all-menus/menus-default.png';
+import nutrisari from '../assets/images/all-menus/25.png';
+import gooddayCappuccino from '../assets/images/all-menus/21.png';
+
+// Kopi Tubruk
+import kopiRobusta from '../assets/images/all-menus/menus-default.png';
+import kopiArabica from '../assets/images/all-menus/menus-default.png';
 
 export interface MenuItem {
   id: string;
@@ -35,7 +61,7 @@ export const MENU_ITEMS: MenuItem[] = [
     category: 'mie-ayam',
     price: 10000,
     description: 'Mie kenyal gurih dengan topping ayam semur istimewa, 2 bakso sapi lembut, pangsit goreng renyah, caisim segar, dan kuah kaldu terpisah.',
-    isSpecial: true,
+    isSpecial: false,
     specialBadgeText: 'MENU SPESIAL KEDAI PIKUL',
     image: mieAyamKomplit,
   },
@@ -53,6 +79,7 @@ export const MENU_ITEMS: MenuItem[] = [
     category: 'mie-ayam',
     price: 6000,
     description: 'Mie goreng instan favorit dengan tingkat kematangan pas, disajikan hangat dengan taburan bawang goreng harum.',
+    image: mieGorengInstan,
   },
   {
     id: 'mie-kuah-instan',
@@ -60,6 +87,7 @@ export const MENU_ITEMS: MenuItem[] = [
     category: 'mie-ayam',
     price: 6000,
     description: 'Mie rebus kuah gurih hangat, berpadu bumbu kaya rasa, sangat cocok untuk mengisi perut kapan saja.',
+    image: mieKuahInstan,
   },
   {
     id: 'mie-instan-telor',
@@ -67,6 +95,7 @@ export const MENU_ITEMS: MenuItem[] = [
     category: 'mie-ayam',
     price: 9000,
     description: 'Mie instan favorit (goreng/kuah) disajikan dengan tambahan telur ceplok atau rebus setengah matang yang nikmat.',
+    image: mieInstanTelor,
   },
 
   // --- CEMILAN ---
@@ -84,6 +113,7 @@ export const MENU_ITEMS: MenuItem[] = [
     category: 'cemilan',
     price: 5000,
     description: 'Tahu goreng hangat lembut bertabur bumbu petis udang hitam khas Jawa Timur yang legit, manis, dan gurih pedas.',
+    image: tahuPetis,
   },
   {
     id: 'tahu-kocek',
@@ -92,6 +122,7 @@ export const MENU_ITEMS: MenuItem[] = [
     price: 5000,
     description: 'Tahu goreng hangat yang dikocek/diulek bersama racikan cabai rawit segar dengan tingkat kepedasan dari Level 0 hingga Level 5!',
     hasSpicyOptions: true,
+    image: tahuKocek,
   },
   {
     id: 'siomay-goreng',
@@ -99,6 +130,7 @@ export const MENU_ITEMS: MenuItem[] = [
     category: 'cemilan',
     price: 6000,
     description: 'Siomay goreng renyah di luar kenyal di dalam, disajikan dengan saus sambal khas Kedai Pikul yang menggoda.',
+    image: siomayGoreng,
   },
   {
     id: 'siomay-kuah',
@@ -106,6 +138,7 @@ export const MENU_ITEMS: MenuItem[] = [
     category: 'cemilan',
     price: 6000,
     description: 'Siomay lembut dalam semangkuk kuah kaldu panas kaya rasa, bertabur daun bawang dan seledri segar.',
+    image: siomayKuah,
   },
   {
     id: 'kentang-goreng',
@@ -113,6 +146,7 @@ export const MENU_ITEMS: MenuItem[] = [
     category: 'cemilan',
     price: 6000,
     description: 'Kentang stik goreng renyah bertabur bumbu tabur gurih, camilan santai paling pas untuk nongkrong.',
+    image: kentangGoreng,
   },
   {
     id: 'nugget-goreng',
@@ -120,6 +154,7 @@ export const MENU_ITEMS: MenuItem[] = [
     category: 'cemilan',
     price: 6000,
     description: 'Nugget ayam goreng keemasan renyah di luar dan juicy di dalam, lengkap dengan cocolan saus tomat dan sambal.',
+    image: nuggetGoreng,
   },
   {
     id: 'sosis-goreng',
@@ -127,6 +162,7 @@ export const MENU_ITEMS: MenuItem[] = [
     category: 'cemilan',
     price: 6000,
     description: 'Sosis daging sapi pilihan yang digoreng mekar dengan rasa gurih nagih.',
+    image: sosisGoreng,
   },
   {
     id: 'mix-platter',
@@ -134,6 +170,7 @@ export const MENU_ITEMS: MenuItem[] = [
     category: 'cemilan',
     price: 10000,
     description: 'Porsi puas berisi kombinasi kentang goreng, nugget, sosis, dan siomay dalam satu piring untuk dinikmati bersama teman.',
+    image: mixPlatter,
   },
 
   // --- MINUMAN ---
@@ -146,7 +183,7 @@ export const MENU_ITEMS: MenuItem[] = [
     description: 'Seduhan teh wangi melati khas Nusantara, tersedia disajikan dingin segar atau hangat menenangkan.',
     hasTempOptions: true,
     tempPrices: { es: 3000, hot: 3000 },
-    image: minuman,
+    image: teh,
   },
   {
     id: 'temulawak',
@@ -157,6 +194,7 @@ export const MENU_ITEMS: MenuItem[] = [
     description: 'Minuman herbal tradisional temulawak segar pelepas dahaga dan penambah stamina tubuh.',
     hasTempOptions: true,
     tempPrices: { es: 3000, hot: 3000 },
+    image: temulawak,
   },
   {
     id: 'jeruk-peras',
@@ -167,6 +205,7 @@ export const MENU_ITEMS: MenuItem[] = [
     description: 'Perasan jeruk segar asli kaya vitamin C dengan sensasi manis asam menyegarkan tenggorokan.',
     hasTempOptions: true,
     tempPrices: { es: 4000, hot: 4000 },
+    image: jerukPeras,
   },
   {
     id: 'milo',
@@ -177,6 +216,7 @@ export const MENU_ITEMS: MenuItem[] = [
     description: 'Coklat malt Milo yang creamy, kental, dan kaya energi, favorit santai semua usia.',
     hasTempOptions: true,
     tempPrices: { es: 5000, hot: 5000 },
+    image: milo,
   },
   {
     id: 'susu',
@@ -188,6 +228,7 @@ export const MENU_ITEMS: MenuItem[] = [
     hasTempOptions: true,
     hasMilkOptions: true,
     tempPrices: { es: 4000, hot: 4000 },
+    image: susuCoklatPutih,
   },
   {
     id: 'nutrisari',
@@ -198,6 +239,7 @@ export const MENU_ITEMS: MenuItem[] = [
     description: 'Minuman rasa buah jeruk manis segar bervitamin, siap menyegarkan harimu.',
     hasTempOptions: true,
     tempPrices: { es: 3000, hot: 3000 },
+    image: nutrisari,
   },
   {
     id: 'goodday-cappuccino',
@@ -208,6 +250,7 @@ export const MENU_ITEMS: MenuItem[] = [
     description: 'Kopi cappuccino manis lembut dengan taburan choco granule harum, bikin suasana ngobrol makin rileks.',
     hasTempOptions: true,
     tempPrices: { es: 5000, hot: 4000 },
+    image: gooddayCappuccino,
   },
 
   // --- KOPI TUBRUK ---
@@ -217,7 +260,7 @@ export const MENU_ITEMS: MenuItem[] = [
     category: 'kopi',
     price: 6000,
     description: 'Kopi tubruk robusta murni dengan body tebal, aroma harum kuat, dan rasa pahit mantap pembakar semangat.',
-    image: minuman,
+    image: kopiRobusta,
   },
   {
     id: 'kopi-arabika',
@@ -225,6 +268,7 @@ export const MENU_ITEMS: MenuItem[] = [
     category: 'kopi',
     price: 9000,
     description: 'Kopi tubruk arabika istimewa dengan aroma wangi floral, rasa kompleks yang halus, dan keasaman seimbang.',
+    image: kopiArabica,
   },
 ];
 

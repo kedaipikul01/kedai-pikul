@@ -1,5 +1,7 @@
 import React from 'react';
 import { Heart, Sparkles, Coffee, ShieldCheck, Flame } from 'lucide-react';
+import menusDefaultImage from '../assets/images/all-menus/menus-default.png';
+import drinksImage from '../assets/images/minuman_segar_kopi_1794120890050.jpg';
 
 export const AboutSection: React.FC = () => {
   return (
@@ -15,7 +17,7 @@ export const AboutSection: React.FC = () => {
               {/* Primary Image: Tahu Walik & Street Food Snack Platter */}
               <div className="rounded-3xl overflow-hidden shadow-2xl border-4 border-white bg-stone-100 aspect-[4/3]">
                 <img
-                  src="/src/assets/images/tahu_walik_cemilan_1794120890349.jpg"
+                  src={menusDefaultImage}
                   alt="Sajian Tahu Walik dan cemilan hangat khas Kedai Pikul"
                   className="w-full h-full object-cover transform hover:scale-105 transition-transform duration-500"
                   referrerPolicy="no-referrer"
@@ -26,7 +28,7 @@ export const AboutSection: React.FC = () => {
               {/* Secondary Overlapping Image: Warm Drinks & Mie */}
               <div className="hidden sm:block absolute -bottom-8 -right-6 w-3/5 rounded-2xl overflow-hidden shadow-2xl border-4 border-white bg-stone-100 aspect-[4/3]">
                 <img
-                  src="/src/assets/images/minuman_segar_kopi_1794120890050.jpg"
+                  src={drinksImage}
                   alt="Es teh manis segar dan Kopi Tubruk Kedai Pikul"
                   className="w-full h-full object-cover transform hover:scale-105 transition-transform duration-500"
                   referrerPolicy="no-referrer"
